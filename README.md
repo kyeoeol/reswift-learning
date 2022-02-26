@@ -12,6 +12,17 @@
 - **Views:** 앱의 상태가 변경되면 view가 업데이트된다. view는 현재 앱의 상태를 간단하게 시각화한다.
 - **State Changes:** ReSwift에서 앱은 action을 통해서만 상태를 변경할 수 있다. action은 상태 변경을 설명하는 작은 데이터 조각이다. 상태 변경 방법을 제한함으로써 앱을 더 쉽게 이해할 수 있고 더 쉽게 협업을 할 수 있다.
 
+# A few principles of ReSwift
+- **The Store**<br>
+Store는 전체 앱 상태를 단일 데이터 구조의 형태로 저장한다. 이 상태는 Store에 Action을 전달해야만 수정할 수 있다. Store의 상태가 변경될 때마다 Store는 모든 Observer에게 알린다.
+
+- **Actions**<br>
+Action은 상태 변경을 설명하는 선언적 방법이다. Action에는 코드가 포함되어 있지 않으며 Store에서 사용하고 Reducer로 전달된다.<br>
+Reducer는 각 Action에 대해 다른 상태 변경을 구현하여 작업을 처리한다.
+
+- **Reducers**<br>
+Reducer는 현재 Action과 현재 앱 상태를 기반으로 새 앱 상태를 생성하는 순수한 기능(pure function)을 제공한다.
+
 <br>
 <br>
 <br>
