@@ -83,6 +83,7 @@ let mainStore = Store<AppState>(
     state: nil
 )
 
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	[...]
 }
