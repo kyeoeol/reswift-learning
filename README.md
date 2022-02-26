@@ -30,6 +30,7 @@ Reducer는 현재 Action과 현재 앱 상태를 기반으로 새 앱 상태를 
 </div>
 
 <br>
+<br>
 
 증가 및 감소할 수 있는 카운터를 유지하는 매우 간단한 앱이 있다고 할 때, 다음과 같이 앱 상태를 정의할 수 있다:
 ```swift
@@ -38,6 +39,8 @@ struct AppState {
 }
 ```
 
+<br>
+
 이 예제와 같이 간단한 Action의 경우 카운터 증가 및 감소에 대한 두 가지 Action을 다음과 같이 빈 구조체로 정의할 수 있다:
 > <a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html">Getting Started Guide</a>에서 더 복잡한 Action을 구성하는 방법에 대해 배울 수 있다.
 ```swift
@@ -45,7 +48,13 @@ struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 ```
 
+<br>
+
 다음과 같이 switch문을 사용함으로써 Reducer는 다양한 Action type에 응답할 수 있다:
+> **예측 가능한(predictable) 앱 상태를 갖기 위해서 중요한 것.**
+> 1. Reducer is always free of side effects.
+> 2. 현재 앱의 상태와 Action을 받아야 한다.
+> 3. 새로운 앱 상태를 return 해야 한다.
 ```swift
 func counterReducer(action: Action, state: AppState?) -> AppState {
     var state = state ?? AppState()
@@ -64,6 +73,60 @@ func counterReducer(action: Action, state: AppState?) -> AppState {
     return state
 }
 ```
+
+<br>
+
+상태를 유지하고 Reducer에 Action을 위임하려면 Store가 필요한데, 이 예제에서는 AppDelegate 파일에 mainStore라는 전역 상수를 만들었다.
+```swift
+let mainStore = Store<AppState>(
+    reducer: counterReducer,
+    state: nil
+)
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+	[...]
+}
+```
+
+<br>
+
+마지막으로, ViewController(or view layer)는 앱 상태를 변경할 때마다 Store 업데이트 및 방출(emitting) Action을 구독함으로써 이 시스템에 연결되어야 한다.
+```swift
+class CounterViewController: UIViewController, StoreSubscriber {
+
+    @IBOutlet var counterLabel: UILabel!
+
+    override func viewWillAppear(_ animated: Bool) {
+        mainStore.subscribe(self)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(self)
+    }
+
+    func newState(state: AppState) {
+        counterLabel.text = "\(state.counter)"
+    }
+
+    @IBAction func increaseButtonTapped(_ sender: UIButton) {
+        mainStore.dispatch(
+            CounterActionIncrease()
+        )
+    }
+
+    @IBAction func decreaseButtonTapped(_ sender: UIButton) {
+        mainStore.dispatch(
+            CounterActionDecrease()
+        )
+    }
+
+}
+```
+- ``newState`` 메서드는 새 앱 상태를 사용할 수 있을 때마다 Store에서 호출되고, 이 메서드에서 최신 앱 상태가 반영되도록 view를 조정해야 한다.
+- 버튼을 탭하면 Store와 해당 Reducer에 처리해야 할 Action이 전달되어 새로운 앱 상태가 생성된다.
+
+이 예제는 ReSwift 기능의 일부만 보여주는 아주 기본적인 예제이고, 이 아키텍처로 전체 앱을 빌드하는 방법을 알아보려면 <a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html">Getting Started Guide</a>를 참고하면 된다.
+이 예제의 완전한 구현은 <a href="https://github.com/ReSwift/CounterExample">CounterExample</a> 프로젝트를 참고하면 된다.
 
 <br>
 <br>
