@@ -94,8 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 마지막으로, ViewController(or view layer)는 앱 상태를 변경할 때마다 Store 업데이트 및 방출(emitting) Action을 구독함으로써 이 시스템에 연결되어야 한다.
 ```swift
 class CounterViewController: UIViewController, StoreSubscriber {
-    typealias StoreSubscriberStateType = AppState
-
     @IBOutlet var counterLabel: UILabel!
 
     override func viewWillAppear(_ animated: Bool) {
