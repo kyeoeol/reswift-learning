@@ -31,10 +31,37 @@ Reducer는 현재 Action과 현재 앱 상태를 기반으로 새 앱 상태를 
 
 <br>
 
-증가 및 감소할 수 있는 카운터를 유지하는 매우 간단한 앱의 경우 앱 상태를 다음과 같이 정의할 수 있다:
+증가 및 감소할 수 있는 카운터를 유지하는 매우 간단한 앱이 있다고 할 때, 다음과 같이 앱 상태를 정의할 수 있다:
 ```swift
 struct AppState {
     var counter = 0
+}
+```
+
+이 예제와 같이 간단한 Action의 경우 카운터 증가 및 감소에 대한 두 가지 Action을 다음과 같이 빈 구조체로 정의할 수 있다:
+> <a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html">Getting Started Guide</a>에서 더 복잡한 Action을 구성하는 방법에 대해 배울 수 있다.
+```swift
+struct CounterActionIncrease: Action {}
+struct CounterActionDecrease: Action {}
+```
+
+다음과 같이 switch문을 사용함으로써 Reducer는 다양한 Action type에 응답할 수 있다:
+```swift
+func counterReducer(action: Action, state: AppState?) -> AppState {
+    var state = state ?? AppState()
+
+    switch action {
+    case _ as CounterActionIncrease:
+        state.counter += 1
+    
+    case _ as CounterActionDecrease:
+        state.counter -= 1
+    
+    default:
+        break
+    }
+
+    return state
 }
 ```
 
