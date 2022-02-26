@@ -127,7 +127,7 @@ class CounterViewController: UIViewController, StoreSubscriber {
 - 버튼을 탭하면 Store와 해당 Reducer에 처리해야 할 Action이 전달되어 새로운 앱 상태가 생성된다.
 
 이 예제는 ReSwift 기능의 일부만 보여주는 아주 기본적인 예제이고, 이 아키텍처로 전체 앱을 빌드하는 방법을 알아보려면 <a href="http://reswift.github.io/ReSwift/master/getting-started-guide.html">Getting Started Guide</a>를 참고하면 된다.<br>
-증가 및 감소할 수 있는 카운터 예제의 완전한 구현은 <a href="https://github.com/ReSwift/CounterExample">CounterExample</a> 프로젝트를 참고하면 된다.
+증가 및 감소할 수 있는 카운터 예제의 완전한 구현은 <a href="https://github.com/haanwave/reswift-learning/tree/main/counter-reswift">counter-reswift</a> 프로젝트를 참고하면 된다.
 
 <br>
 
