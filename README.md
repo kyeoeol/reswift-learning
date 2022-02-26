@@ -129,6 +129,30 @@ class CounterViewController: UIViewController, StoreSubscriber {
 증가 및 감소할 수 있는 카운터 예제의 완전한 구현은 <a href="https://github.com/ReSwift/CounterExample">CounterExample</a> 프로젝트를 참고하면 된다.
 
 <br>
+
+## Create a subscription of several substates combined.(결합된 여러 하위 상태의 구독 만들기)
+- 전체 앱 상태를 매개변수로 사용하는 initializer를 사용해 subscriber 클래스에 필요한 데이터 모델을 나타내는 구조체를 생성하기만 하면 된다.<br>
+- 이 initializer를 앱 상태에서 subscriber 상태로 가는 mapper/selector로 간주한다.<br>
+- MySubState가 구조체이고 Equatable을 준수하기 때문에 ReSwift는 계산된(Computed) 출력이 변경되지 않은 경우 subscriber에게 알리지 않는다.<br>
+- 또한, Swift는 subscription type을 유추할 수 있다.
+```swift
+struct MySubState: Equatable {
+    // 전체 앱 상태에서 파생되어 결합된 하위 상태
+    
+    init(state: AppState) {
+        // 필요한 하위 상태를 여기에서 계산(Compute)한다.
+    }
+}
+```
+```swift
+store.subscribe(self) { $0.select(MySubState.init) }
+    
+func newState(state: MySubState) {
+    // Profit!
+}
+```
+
+<br>
 <br>
 <br>
 <br>
