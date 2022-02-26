@@ -153,6 +153,12 @@ func newState(state: MySubState) {
 ```
 
 <br>
+
+# To get an understanding of the core principles
+ReSwift recommend reading the brilliant <a href="https://redux.js.org">redux documentation</a>.
+
+
+<br>
 <br>
 <br>
 <br>
