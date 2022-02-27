@@ -1,0 +1,37 @@
+PODS:
+  - ListKit (2.0.0)
+  - ReSwift (5.0.0)
+  - ReSwiftRouter (0.7.1):
+    - ReSwift (~> 5.0.0)
+  - ReSwiftThunk (1.2.0):
+    - ReSwift (~> 5.0)
+    - ReSwiftThunk/Core (= 1.2.0)
+  - ReSwiftThunk/Core (1.2.0):
+    - ReSwift (~> 5.0)
+  - SAMKeychain (1.5.3)
+
+DEPENDENCIES:
+  - ListKit
+  - ReSwift
+  - ReSwiftRouter
+  - ReSwiftThunk
+  - SAMKeychain
+
+SPEC REPOS:
+  trunk:
+    - ListKit
+    - ReSwift
+    - ReSwiftRouter
+    - ReSwiftThunk
+    - SAMKeychain
+
+SPEC CHECKSUMS:
+  ListKit: 3cc52b46436812398207846bd08e91feaea85042
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  ReSwiftRouter: 916d8f940dbecc1d32dc1912b8f1891c7bcc7836
+  ReSwiftThunk: 23c8ea9092d9dc94b72005f19352dbd37fa42533
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+
+PODFILE CHECKSUM: 055df71506f6c0d377f1000dbcf40202b3e9f00d
+
+COCOAPODS: 1.11.2
