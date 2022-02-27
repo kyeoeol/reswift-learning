@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User-->
+        <scene sceneID="ezz-Qp-Xgg">
+            <objects>
+                <viewController storyboardIdentifier="UserViewController" id="5cR-c3-gQ1" customClass="UserViewController" customModule="tabbar_navigation_reswift_router" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xeB-VS-AHd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Hn-M2-dG4">
+                                <rect key="frame" x="155.5" y="402" width="103" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-5C-H3e">
+                                        <rect key="frame" x="21" y="0.0" width="61" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-kq-b1N">
+                                        <rect key="frame" x="0.0" y="56" width="103" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tap to Push"/>
+                                        <connections>
+                                            <action selector="tapPushButton:" destination="5cR-c3-gQ1" eventType="touchUpInside" id="F8O-FN-YqJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yKr-H5-aZ6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Hn-M2-dG4" firstAttribute="centerY" secondItem="xeB-VS-AHd" secondAttribute="centerY" id="O7h-wG-4KF"/>
+                            <constraint firstItem="9Hn-M2-dG4" firstAttribute="centerX" secondItem="xeB-VS-AHd" secondAttribute="centerX" id="THg-4M-me6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="person.circle" catalog="system" id="EYQ-ZS-SBN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xys-Uk-RuI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="51"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="3dx-KE-IzW">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Uyn-tv-Mto" customClass="HomeViewController" customModule="tabbar_navigation_reswift_router" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zHN-Th-XiS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-69-A7R">
+                                <rect key="frame" x="168" y="430" width="78" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a9Z-iE-6cX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z9D-69-A7R" firstAttribute="centerX" secondItem="zHN-Th-XiS" secondAttribute="centerX" id="Sc1-IC-ZAp"/>
+                            <constraint firstItem="z9D-69-A7R" firstAttribute="centerY" secondItem="zHN-Th-XiS" secondAttribute="centerY" id="y5A-UX-L38"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="VNK-1v-oc9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qma-oL-fjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="51"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="RZx-4u-g2M">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailViewController" id="mXn-lq-spa" customClass="UserDetailViewController" customModule="tabbar_navigation_reswift_router" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QYC-pI-AWU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T4v-tE-xg3">
+                                <rect key="frame" x="136" y="402" width="142" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flL-A0-AhM">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jer-r7-sSY">
+                                        <rect key="frame" x="24.5" y="56" width="93" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Tap to Pop"/>
+                                        <connections>
+                                            <action selector="tapPopButton:" destination="mXn-lq-spa" eventType="touchUpInside" id="gX9-QC-NeP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Os-pq-rL0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4v-tE-xg3" firstAttribute="centerX" secondItem="QYC-pI-AWU" secondAttribute="centerX" id="9J1-nb-j72"/>
+                            <constraint firstItem="T4v-tE-xg3" firstAttribute="centerY" secondItem="QYC-pI-AWU" secondAttribute="centerY" id="HCJ-FQ-Tai"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMm-Kh-D7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="51"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

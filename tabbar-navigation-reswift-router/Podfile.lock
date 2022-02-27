@@ -1,0 +1,21 @@
+PODS:
+  - ReSwift (5.0.0)
+  - ReSwiftRouter (0.7.1):
+    - ReSwift (~> 5.0.0)
+
+DEPENDENCIES:
+  - ReSwift
+  - ReSwiftRouter
+
+SPEC REPOS:
+  trunk:
+    - ReSwift
+    - ReSwiftRouter
+
+SPEC CHECKSUMS:
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
+  ReSwiftRouter: 916d8f940dbecc1d32dc1912b8f1891c7bcc7836
+
+PODFILE CHECKSUM: b5cd46f72f1c831bc33590e37d8a33bfa53591bf
+
+COCOAPODS: 1.11.2
