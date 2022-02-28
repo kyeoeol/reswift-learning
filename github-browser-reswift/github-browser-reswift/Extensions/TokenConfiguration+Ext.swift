@@ -10,7 +10,7 @@ import OctoKit
 
 extension TokenConfiguration {
     init(data: Data) {
-        let json: [String: AnyObject] = try! JSONSerialization.jsonObject(with: data, options: []) as! [String : AnyObject]
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String : AnyObject]
         let url = json["endpoint"] as! String
         let accessToken: String? = {
             if case let s = json["accesstoken"] as? String, s != "null" {
@@ -19,7 +19,7 @@ extension TokenConfiguration {
                 return nil
             }
         }()
-
+        
         self.init(accessToken, url: url)
     }
     
@@ -31,5 +31,4 @@ extension TokenConfiguration {
         
         return try! JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions(rawValue: 0))
     }
-    
 }
