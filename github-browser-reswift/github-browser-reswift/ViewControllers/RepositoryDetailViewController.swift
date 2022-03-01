@@ -8,5 +8,4 @@
 import UIKit
 
 class RepositoryDetailViewController: UIViewController {
-    static let identifier = "RepositoryDetailViewController"
 }

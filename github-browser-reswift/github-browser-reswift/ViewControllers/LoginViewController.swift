@@ -6,7 +6,27 @@
 //
 
 import UIKit
+import ReSwift
+import ReSwiftRouter
+import SafariServices
 
 class LoginViewController: UIViewController {
-    static let identifier = "LoginViewController"
+    @IBAction func tapAuthenticateButton(_ sender: UIButton) {
+        mainStore.dispatch(
+            authenticationUser
+        )
+    }
+}
+
+// MARK: - SFSafariViewControllerDelegate
+extension LoginViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        print("--->[LoginViewController] safariViewControllerDidFinish")
+        
+        mainStore.dispatch(
+            SetRouteAction([
+                LoginRoute
+            ])
+        )
+    }
 }

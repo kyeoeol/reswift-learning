@@ -19,6 +19,13 @@
 		85ED469C27CBBC2E00248922 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469B27CBBC2E00248922 /* BookmarkViewController.swift */; };
 		85ED469E27CBBE2900248922 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469D27CBBE2900248922 /* Credentials.swift */; };
 		85ED46B327CBC7C000248922 /* TokenConfiguration+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46B227CBC7C000248922 /* TokenConfiguration+Ext.swift */; };
+		85ED46D327CE2D9300248922 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46D227CE2D9300248922 /* AppState.swift */; };
+		85ED46D527CE2DDA00248922 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46D427CE2DDA00248922 /* AuthenticationState.swift */; };
+		85ED46D727CE311200248922 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46D627CE311200248922 /* AuthenticationService.swift */; };
+		85ED46D927CE320500248922 /* AuthenticationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46D827CE320500248922 /* AuthenticationActions.swift */; };
+		85ED46DB27CE326B00248922 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46DA27CE326B00248922 /* AppReducer.swift */; };
+		85ED46DD27CE327700248922 /* AuthenticationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46DC27CE327700248922 /* AuthenticationReducer.swift */; };
+		85ED46DF27CE34A600248922 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46DE27CE34A600248922 /* Routes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		85ED469B27CBBC2E00248922 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		85ED469D27CBBE2900248922 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		85ED46B227CBC7C000248922 /* TokenConfiguration+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenConfiguration+Ext.swift"; sourceTree = "<group>"; };
+		85ED46D227CE2D9300248922 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		85ED46D427CE2DDA00248922 /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		85ED46D627CE311200248922 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		85ED46D827CE320500248922 /* AuthenticationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationActions.swift; sourceTree = "<group>"; };
+		85ED46DA27CE326B00248922 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		85ED46DC27CE327700248922 /* AuthenticationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationReducer.swift; sourceTree = "<group>"; };
+		85ED46DE27CE34A600248922 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		A4305C8AD9DB1F20FC548D3E /* Pods_github_browser_reswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github_browser_reswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,10 +100,10 @@
 				85ED46AD27CBC54C00248922 /* GithubAuth */,
 				85ED46AE27CBC71900248922 /* Services */,
 				85ED469427CBBBAC00248922 /* ViewControllers */,
-				85ED46AC27CBC54300248922 /* Routes */,
 				85ED469127CBBB8800248922 /* State */,
 				85ED469227CBBB9200248922 /* Actions */,
 				85ED469327CBBB9700248922 /* Reducers */,
+				85ED46AC27CBC54300248922 /* Routes */,
 				85ED467127CBBA5000248922 /* AppDelegate.swift */,
 				85ED467727CBBA5000248922 /* Main.storyboard */,
 				85ED467A27CBBA5300248922 /* Assets.xcassets */,
@@ -102,6 +116,8 @@
 		85ED469127CBBB8800248922 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				85ED46D227CE2D9300248922 /* AppState.swift */,
+				85ED46D427CE2DDA00248922 /* AuthenticationState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -109,6 +125,7 @@
 		85ED469227CBBB9200248922 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				85ED46D827CE320500248922 /* AuthenticationActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -116,6 +133,8 @@
 		85ED469327CBBB9700248922 /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				85ED46DA27CE326B00248922 /* AppReducer.swift */,
+				85ED46DC27CE327700248922 /* AuthenticationReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -134,6 +153,7 @@
 		85ED46AC27CBC54300248922 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				85ED46DE27CE34A600248922 /* Routes.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -149,6 +169,7 @@
 		85ED46AE27CBC71900248922 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				85ED46D627CE311200248922 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,12 +312,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				85ED469E27CBBE2900248922 /* Credentials.swift in Sources */,
+				85ED46DF27CE34A600248922 /* Routes.swift in Sources */,
+				85ED46D527CE2DDA00248922 /* AuthenticationState.swift in Sources */,
+				85ED46DD27CE327700248922 /* AuthenticationReducer.swift in Sources */,
 				85ED469827CBBC0700248922 /* MainViewController.swift in Sources */,
 				85ED469A27CBBC2400248922 /* RepositoryDetailViewController.swift in Sources */,
+				85ED46D327CE2D9300248922 /* AppState.swift in Sources */,
 				85ED469627CBBBF700248922 /* LoginViewController.swift in Sources */,
+				85ED46DB27CE326B00248922 /* AppReducer.swift in Sources */,
 				85ED46B327CBC7C000248922 /* TokenConfiguration+Ext.swift in Sources */,
 				85ED467227CBBA5000248922 /* AppDelegate.swift in Sources */,
 				85ED469C27CBBC2E00248922 /* BookmarkViewController.swift in Sources */,
+				85ED46D927CE320500248922 /* AuthenticationActions.swift in Sources */,
+				85ED46D727CE311200248922 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

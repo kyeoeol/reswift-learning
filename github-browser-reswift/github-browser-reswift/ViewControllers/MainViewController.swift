@@ -8,5 +8,4 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    static let identifier = "MainViewController"
 }

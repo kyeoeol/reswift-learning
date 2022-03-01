@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="W3S-CG-Yb5">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="MJW-Cm-R7x" customClass="LoginViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="MJW-Cm-R7x" customClass="LoginViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pdA-5h-dVN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                 <state key="normal" title="Authenticate with GitHub">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapAuthenticateButton:" destination="MJW-Cm-R7x" eventType="touchUpInside" id="hqD-IX-fBD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9US-7U-jfa"/>

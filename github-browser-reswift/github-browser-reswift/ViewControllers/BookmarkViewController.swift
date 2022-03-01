@@ -8,5 +8,4 @@
 import UIKit
 
 class BookmarkViewController: UIViewController {
-    static let identifier = "BookmarkViewController"
 }
