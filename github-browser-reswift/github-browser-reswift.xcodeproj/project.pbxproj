@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0EB0173F6D458CDEE048A35F /* Pods_github_browser_reswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4305C8AD9DB1F20FC548D3E /* Pods_github_browser_reswift.framework */; };
+		853B2CAA27D4F66C00EEE5C6 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B2CA927D4F66C00EEE5C6 /* RepositoryTableViewCell.swift */; };
+		853B2CAC27D4F72000EEE5C6 /* GitHubRepositoriesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B2CAB27D4F72000EEE5C6 /* GitHubRepositoriesActions.swift */; };
+		853B2CAE27D4F74700EEE5C6 /* GitHubAPIReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B2CAD27D4F74700EEE5C6 /* GitHubAPIReducers.swift */; };
+		853B2CB027D4F8A200EEE5C6 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B2CAF27D4F8A200EEE5C6 /* RepositoryService.swift */; };
 		85ED467227CBBA5000248922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED467127CBBA5000248922 /* AppDelegate.swift */; };
 		85ED467927CBBA5000248922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85ED467727CBBA5000248922 /* Main.storyboard */; };
 		85ED467B27CBBA5300248922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85ED467A27CBBA5300248922 /* Assets.xcassets */; };
@@ -15,8 +19,6 @@
 		85ED469027CBBB0900248922 /* OctoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85ED468F27CBBB0900248922 /* OctoKit */; };
 		85ED469627CBBBF700248922 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469527CBBBF700248922 /* LoginViewController.swift */; };
 		85ED469827CBBC0700248922 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469727CBBC0700248922 /* MainViewController.swift */; };
-		85ED469A27CBBC2400248922 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469927CBBC2400248922 /* RepositoryDetailViewController.swift */; };
-		85ED469C27CBBC2E00248922 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469B27CBBC2E00248922 /* BookmarkViewController.swift */; };
 		85ED469E27CBBE2900248922 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED469D27CBBE2900248922 /* Credentials.swift */; };
 		85ED46B327CBC7C000248922 /* TokenConfiguration+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46B227CBC7C000248922 /* TokenConfiguration+Ext.swift */; };
 		85ED46D327CE2D9300248922 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED46D227CE2D9300248922 /* AppState.swift */; };
@@ -31,6 +33,10 @@
 /* Begin PBXFileReference section */
 		4E8B3307E5B804F3A14F1450 /* Pods-github-browser-reswift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-browser-reswift.release.xcconfig"; path = "Target Support Files/Pods-github-browser-reswift/Pods-github-browser-reswift.release.xcconfig"; sourceTree = "<group>"; };
 		73B2694F536FE893E02A06FB /* Pods-github-browser-reswift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-browser-reswift.debug.xcconfig"; path = "Target Support Files/Pods-github-browser-reswift/Pods-github-browser-reswift.debug.xcconfig"; sourceTree = "<group>"; };
+		853B2CA927D4F66C00EEE5C6 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		853B2CAB27D4F72000EEE5C6 /* GitHubRepositoriesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoriesActions.swift; sourceTree = "<group>"; };
+		853B2CAD27D4F74700EEE5C6 /* GitHubAPIReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIReducers.swift; sourceTree = "<group>"; };
+		853B2CAF27D4F8A200EEE5C6 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
 		85ED466E27CBBA5000248922 /* github-browser-reswift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-browser-reswift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85ED467127CBBA5000248922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85ED467827CBBA5000248922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,8 +45,6 @@
 		85ED467F27CBBA5300248922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85ED469527CBBBF700248922 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		85ED469727CBBC0700248922 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		85ED469927CBBC2400248922 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
-		85ED469B27CBBC2E00248922 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		85ED469D27CBBE2900248922 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		85ED46B227CBC7C000248922 /* TokenConfiguration+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenConfiguration+Ext.swift"; sourceTree = "<group>"; };
 		85ED46D227CE2D9300248922 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		853B2CA827D4F65F00EEE5C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				853B2CA927D4F66C00EEE5C6 /* RepositoryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		85ED466527CBBA5000248922 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 				85ED46B127CBC7B200248922 /* Extensions */,
 				85ED46AD27CBC54C00248922 /* GithubAuth */,
 				85ED46AE27CBC71900248922 /* Services */,
+				853B2CA827D4F65F00EEE5C6 /* Views */,
 				85ED469427CBBBAC00248922 /* ViewControllers */,
 				85ED469127CBBB8800248922 /* State */,
 				85ED469227CBBB9200248922 /* Actions */,
@@ -126,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				85ED46D827CE320500248922 /* AuthenticationActions.swift */,
+				853B2CAB27D4F72000EEE5C6 /* GitHubRepositoriesActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -135,6 +149,7 @@
 			children = (
 				85ED46DA27CE326B00248922 /* AppReducer.swift */,
 				85ED46DC27CE327700248922 /* AuthenticationReducer.swift */,
+				853B2CAD27D4F74700EEE5C6 /* GitHubAPIReducers.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -144,8 +159,6 @@
 			children = (
 				85ED469527CBBBF700248922 /* LoginViewController.swift */,
 				85ED469727CBBC0700248922 /* MainViewController.swift */,
-				85ED469927CBBC2400248922 /* RepositoryDetailViewController.swift */,
-				85ED469B27CBBC2E00248922 /* BookmarkViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -170,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				85ED46D627CE311200248922 /* AuthenticationService.swift */,
+				853B2CAF27D4F8A200EEE5C6 /* RepositoryService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -316,13 +330,15 @@
 				85ED46D527CE2DDA00248922 /* AuthenticationState.swift in Sources */,
 				85ED46DD27CE327700248922 /* AuthenticationReducer.swift in Sources */,
 				85ED469827CBBC0700248922 /* MainViewController.swift in Sources */,
-				85ED469A27CBBC2400248922 /* RepositoryDetailViewController.swift in Sources */,
 				85ED46D327CE2D9300248922 /* AppState.swift in Sources */,
 				85ED469627CBBBF700248922 /* LoginViewController.swift in Sources */,
 				85ED46DB27CE326B00248922 /* AppReducer.swift in Sources */,
+				853B2CAC27D4F72000EEE5C6 /* GitHubRepositoriesActions.swift in Sources */,
+				853B2CAA27D4F66C00EEE5C6 /* RepositoryTableViewCell.swift in Sources */,
 				85ED46B327CBC7C000248922 /* TokenConfiguration+Ext.swift in Sources */,
+				853B2CB027D4F8A200EEE5C6 /* RepositoryService.swift in Sources */,
+				853B2CAE27D4F74700EEE5C6 /* GitHubAPIReducers.swift in Sources */,
 				85ED467227CBBA5000248922 /* AppDelegate.swift in Sources */,
-				85ED469C27CBBC2E00248922 /* BookmarkViewController.swift in Sources */,
 				85ED46D927CE320500248922 /* AuthenticationActions.swift in Sources */,
 				85ED46D727CE311200248922 /* AuthenticationService.swift in Sources */,
 			);

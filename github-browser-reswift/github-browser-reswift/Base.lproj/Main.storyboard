@@ -42,32 +42,16 @@
             </objects>
             <point key="canvasLocation" x="-412" y="49"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4hd-Na-9Nw">
-            <objects>
-                <navigationController storyboardIdentifier="MainViewController" id="pVz-fT-737" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N4y-pr-RXF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="2sW-Bz-76n" kind="relationship" relationship="rootViewController" id="kgT-Gt-NQu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8ym-MJ-MQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="313" y="49"/>
-        </scene>
         <!--Main View Controller-->
         <scene sceneID="dFy-fQ-yCa">
             <objects>
-                <viewController id="2sW-Bz-76n" customClass="MainViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="2sW-Bz-76n" customClass="MainViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTc-Yg-VaD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-1w-pXs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -83,68 +67,13 @@
                     <navigationItem key="navigationItem" id="lPa-1e-RPt">
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="3T1-LC-MqK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Lfi-1w-pXs" id="J4X-K8-Iaz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSB-Oe-x8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="49"/>
-        </scene>
-        <!--Repository Detail View Controller-->
-        <scene sceneID="nbS-gl-3vr">
-            <objects>
-                <viewController storyboardIdentifier="RepositoryDetailViewController" id="jyO-Jb-mf7" customClass="RepositoryDetailViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5QY-pD-GF3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-fe-tMb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="tPg-bf-HMx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gn7-fe-tMb" firstAttribute="leading" secondItem="tPg-bf-HMx" secondAttribute="leading" id="74C-e1-hcX"/>
-                            <constraint firstItem="tPg-bf-HMx" firstAttribute="trailing" secondItem="gn7-fe-tMb" secondAttribute="trailing" id="GVT-PA-XwW"/>
-                            <constraint firstItem="gn7-fe-tMb" firstAttribute="top" secondItem="tPg-bf-HMx" secondAttribute="top" id="VYm-uN-jtS"/>
-                            <constraint firstItem="tPg-bf-HMx" firstAttribute="bottom" secondItem="gn7-fe-tMb" secondAttribute="bottom" id="YVb-iX-rDb"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Wl-iX-yC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1803" y="49"/>
-        </scene>
-        <!--Bookmark View Controller-->
-        <scene sceneID="6bK-6w-VqH">
-            <objects>
-                <viewController storyboardIdentifier="BookmarkViewController" id="Etb-3i-52R" customClass="BookmarkViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P4F-bP-2Zs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5gk-4o-xXA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="5MB-Yv-nAY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5MB-Yv-nAY" firstAttribute="trailing" secondItem="5gk-4o-xXA" secondAttribute="trailing" id="3db-ME-7Dk"/>
-                            <constraint firstItem="5gk-4o-xXA" firstAttribute="leading" secondItem="5MB-Yv-nAY" secondAttribute="leading" id="WGY-cQ-Be5"/>
-                            <constraint firstItem="5MB-Yv-nAY" firstAttribute="bottom" secondItem="5gk-4o-xXA" secondAttribute="bottom" id="vdx-Qe-KhJ"/>
-                            <constraint firstItem="5gk-4o-xXA" firstAttribute="top" secondItem="5MB-Yv-nAY" secondAttribute="top" id="wQ1-lL-l22"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d8n-xI-1Uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1054" y="739"/>
+            <point key="canvasLocation" x="346" y="49"/>
         </scene>
     </scenes>
     <resources>

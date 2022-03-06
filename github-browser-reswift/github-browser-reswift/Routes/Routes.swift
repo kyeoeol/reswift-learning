@@ -149,5 +149,3 @@ class LoginRoutable: Routable {
 }
 
 class OAuthRoutable: Routable {}
-class RepositoryDetailRoutable: Routable {}
-class BookmarkRoutable: Routable {}
