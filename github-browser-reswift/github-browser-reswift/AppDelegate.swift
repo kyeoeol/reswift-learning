@@ -51,20 +51,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        if case .loggedIn(_) = mainStore.state.authenticationState.loggedInState {
-            mainStore.dispatch(
-                ReSwiftRouter.SetRouteAction([MainRoute])
-            )
-        }
-        else {
-            mainStore.dispatch(
-                ReSwiftRouter.SetRouteAction([LoginRoute])
-            )
-        }
+//        if case .loggedIn(_) = mainStore.state.authenticationState.loggedInState {
+//            print("--->[application] loggedIn")
+//            mainStore.dispatch(
+//                ReSwiftRouter.SetRouteAction([MainRoute])
+//            )
+//        }
+//        else {
+//            print("--->[application] not loggedIn")
+//            mainStore.dispatch(
+//                ReSwiftRouter.SetRouteAction([MainRoute, LoginRoute])
+//            )
+//        }
+        
+        mainStore.dispatch(
+            ReSwiftRouter.SetRouteAction([MainRoute, LoginRoute])
+        )
         
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("--->[application:open] url:", url.absoluteString)
+        mainStore.dispatch(
+            handleOpenURL(url: url)
+        )
+        
+        return false
     }
 }
 

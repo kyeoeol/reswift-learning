@@ -11,7 +11,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>reswift</string>
+				<string>swiftflowgithub</string>
 			</array>
 		</dict>
 	</array>

@@ -25,7 +25,7 @@ extension LoginViewController: SFSafariViewControllerDelegate {
         
         mainStore.dispatch(
             SetRouteAction([
-                LoginRoute
+                MainRoute
             ])
         )
     }

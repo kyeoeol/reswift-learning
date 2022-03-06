@@ -45,7 +45,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4hd-Na-9Nw">
             <objects>
-                <navigationController id="pVz-fT-737" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainViewController" id="pVz-fT-737" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N4y-pr-RXF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -61,7 +61,7 @@
         <!--Main View Controller-->
         <scene sceneID="dFy-fQ-yCa">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="2sW-Bz-76n" customClass="MainViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2sW-Bz-76n" customClass="MainViewController" customModule="github_browser_reswift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTc-Yg-VaD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,11 +21,11 @@ class RootRoutable: Routable {
         self.window = window
     }
     
-    func setLoginRoutable() -> Routable {
-        let loginVC = storyboard.instantiateViewController(withIdentifier: LoginRoute) as! LoginViewController
-        window.rootViewController = loginVC
+    func setMainRoutable() -> Routable {
+        let mainVC = storyboard.instantiateViewController(withIdentifier: MainRoute)
+        window.rootViewController = mainVC
         
-        return LoginRoutable(window.rootViewController as! LoginViewController)
+        return MainRoutable(viewController: window.rootViewController!)
     }
     
     func changeRouteSegment(_ from: RouteElementIdentifier,
@@ -34,9 +34,9 @@ class RootRoutable: Routable {
                             completionHandler: @escaping RoutingCompletionHandler) -> Routable {
         print("--->[RootRoutable:changeRouteSegment] change, to:", to)
         
-        if to == LoginRoute {
+        if to == MainRoute {
             completionHandler()
-            return setLoginRoutable()
+            return setMainRoutable()
         }
         else {
             fatalError("--->[RootRoutable] Route not supported!")
@@ -48,9 +48,9 @@ class RootRoutable: Routable {
                           completionHandler: @escaping RoutingCompletionHandler) -> Routable {
         print("--->[RootRoutable:pushRouteSegment] push, routeElementIdentifier:", routeElementIdentifier)
         
-        if routeElementIdentifier == LoginRoute {
+        if routeElementIdentifier == MainRoute {
             completionHandler()
-            return setLoginRoutable()
+            return setMainRoutable()
         }
         else {
             fatalError("--->[RootRoutable] Route not supported!")
@@ -64,6 +64,46 @@ class RootRoutable: Routable {
         
         /// 이것은 기술적으로 호출되지 않아야 한다 -> Router의 버그
         completionHandler()
+    }
+}
+
+class MainRoutable: Routable {
+    let viewController: UIViewController
+    
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func setLoginRoutable() -> Routable {
+        let loginVC = storyboard.instantiateViewController(withIdentifier: LoginRoute) as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        loginVC.modalTransitionStyle = .crossDissolve
+        viewController.present(loginVC, animated: true)
+        
+        return LoginRoutable(loginVC)
+    }
+    
+    func pushRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
+                          animated: Bool,
+                          completionHandler: @escaping RoutingCompletionHandler) -> Routable {
+        
+        if routeElementIdentifier == LoginRoute {
+            completionHandler()
+            return setLoginRoutable()
+        }
+        else {
+            fatalError("--->[MainRoutable] Route not supported!")
+        }
+    }
+    
+    func popRouteSegment(_ routeElementIdentifier: RouteElementIdentifier,
+                         animated: Bool,
+                         completionHandler: @escaping RoutingCompletionHandler) {
+        print("--->[MainRoutable:popRouteSegment] pop, routeElementIdentifier:", routeElementIdentifier)
+        
+        if routeElementIdentifier == LoginRoute {
+            viewController.dismiss(animated: true, completion: completionHandler)
+        }
     }
 }
 
@@ -102,8 +142,12 @@ class LoginRoutable: Routable {
                          completionHandler: @escaping RoutingCompletionHandler) {
         print("--->[LoginRoutable:popRouteSegment] pop, routeElementIdentifier:", routeElementIdentifier)
         
-        completionHandler()
+        if routeElementIdentifier == OAuthRoute {
+            viewController.dismiss(animated: true, completion: completionHandler)
+        }
     }
 }
 
 class OAuthRoutable: Routable {}
+class RepositoryDetailRoutable: Routable {}
+class BookmarkRoutable: Routable {}
